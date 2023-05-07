@@ -51,12 +51,29 @@ body {
   color: var(--slate);
   background-color: var(--white);
 }
+
 .container {
-  width: 1158px;
+  /* phone styles */
+  min-width: 320px;
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  outline: 2px solid red;
+}
+/* tablet styles */
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* desktop styles */
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+  }
 }
 /* header */
 .header {
@@ -66,6 +83,7 @@ body {
 }
 
 .header-container {
+  position: relative;
   display: flex;
   align-items: center;
 }
@@ -79,23 +97,39 @@ body {
   text-transform: uppercase;
   color: var(--iris);
   margin-right: 76px;
+  padding-top: 24px;
+  padding-bottom: 22px;
 }
 .logo {
   color: var(--navy-blue);
 }
 .header-list {
-  display: flex;
+  display: none;
   gap: 40px;
   margin-right: 332px;
   font-weight: 500;
   color: var(--navy-blue);
 }
-.address {
-  font-style: normal;
+@media only screen and (min-width: 768px) {
+  .header-list {
+    display: flex;
+  }
 }
 .address-list {
-  display: flex;
-  gap: 40px;
+  display: none;
+  font-style: normal;
+}
+@media only screen and (min-width: 768px) {
+  .address-list {
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    display: flex;
+    gap: 40px;
+  }
 }
 
 .header-nav {
@@ -144,6 +178,16 @@ body {
 .address-link:hover,
 .address-link:focus {
   color: var(--ocean);
+}
+.button-mobile {
+  position: absolute;
+  right: 16px;
+  background-color: var(--white);
+  border: none;
+  color: var(--navy-blue);
+}
+.icon-menu {
+  fill: var(--navy-blue);
 }
 
 /* hero */
@@ -259,10 +303,17 @@ body {
   gap: 24px;
 }
 .doing-section {
+  display: none;
   padding-bottom: 120px;
 }
 
+@media only screen and (min-width: 1158px) {
+  .doing-section {
+    display: block;
+  }
+}
 /* Our Team section */
+
 .team-list {
   display: flex;
   gap: 24px;
