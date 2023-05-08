@@ -869,7 +869,7 @@ body {
   stroke: var(--navy-blue);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   .menu-toggle {
     display: none;
   }
@@ -916,11 +916,11 @@ body {
   margin: 0;
   list-style: none;
   font-weight: 500;
+  margin-bottom: auto;
 }
 
 .mobile-menu .link {
   display: block;
-  padding: 10px;
   color: var(--navy-blue);
   text-decoration: none;
   font-weight: 700;
@@ -941,9 +941,7 @@ body {
 .mobile-address-items {
   margin-bottom: 40px;
 }
-.mobile-address-menu {
-  margin-bottom: 48px;
-}
+
 .mobile-address {
   font-weight: 700;
   font-size: 36px;
@@ -963,4 +961,10 @@ body {
   align-items: center;
   padding: 0;
   gap: 56px;
+}
+
+@media only screen and (min-width: 767px) {
+  .menu-container {
+    display: none;
+  }
 }
