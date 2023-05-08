@@ -109,7 +109,7 @@ body {
 .header-list {
   display: flex;
   gap: 40px;
-  margin-right: 332px;
+  /* margin-right: 332px; */
   font-weight: 500;
   color: var(--navy-blue);
 }
