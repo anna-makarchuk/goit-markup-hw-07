@@ -100,8 +100,17 @@ body {
   padding-top: 24px;
   padding-bottom: 22px;
 }
-
-/* margin-right: 76px; */
+@media only screen and (min-width: 768px) {
+  .main-logo {
+    margin-right: 105px;
+    padding-left: 0;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .main-logo {
+    margin-right: 76px;
+  }
+}
 
 .logo {
   color: var(--navy-blue);
@@ -109,13 +118,23 @@ body {
 .header-list {
   display: flex;
   gap: 40px;
-  /* margin-right: 332px; */
   font-weight: 500;
   color: var(--navy-blue);
 }
 @media only screen and (max-width: 767px) {
   .header-list {
     display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header-list {
+    margin-right: 105px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .header-list {
+    margin-right: 332px;
   }
 }
 
@@ -159,25 +178,42 @@ body {
 .address {
   font-style: normal;
 }
+
 .address-list {
   display: flex;
   gap: 40px;
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   .address-list {
     display: none;
   }
 }
-.address-link {
-  display: block;
-  padding-top: 24px;
-  padding-bottom: 24px;
-
-  transition: color var(--anim-fast);
+@media only screen and (min-width: 768px) {
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
 }
-.address-link:hover,
-.address-link:focus {
-  color: var(--ocean);
+@media only screen and (min-width: 1158px) {
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .address-link {
+    display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    transition: color var(--anim-fast);
+  }
+  .address-link:hover,
+  .address-link:focus {
+    color: var(--ocean);
+  }
 }
 
 /* hero */
@@ -915,8 +951,12 @@ body {
   padding: 0;
   margin: 0;
   list-style: none;
-  font-weight: 500;
   margin-bottom: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
 }
 
 .mobile-menu .link {
@@ -932,11 +972,6 @@ body {
   color: var(--ocean);
 }
 .mobile-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 0px;
-  gap: 40px;
 }
 .mobile-address-items {
   margin-bottom: 40px;
