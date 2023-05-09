@@ -905,7 +905,7 @@ body {
   stroke: var(--navy-blue);
 }
 
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
