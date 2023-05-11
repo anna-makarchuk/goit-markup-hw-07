@@ -224,31 +224,117 @@ body {
 .hero {
   color: var(--white);
   background-color: var(--navy-blue);
-  padding: 188px 0px;
-  max-width: 1440px;
-  height: 600px;
+  padding: 112px 0px;
+  max-width: 428px;
+  height: 432px;
   margin: 0 auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: linear-gradient(
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url("../images/people-office1.jpg");
+}
+@media only screen and (max-width: 428px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/mobile@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero/mobile@2x.jpg");
+    }
+  }
 }
 
+@media only screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+    height: 436px;
+  }
+}
+@media only screen and (min-width: 429px) and (max-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/tablet@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero/tablet@2x.jpg");
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url("../images/hero/desktop@1x.jpg");
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url("../images/hero/desktop@2x.jpg");
+    }
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .hero {
+    padding: 188px 0px;
+    max-width: 1440px;
+    height: 600px;
+  }
+}
 .hero-title {
   display: block;
   text-align: center;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
   max-width: 496px;
-  margin-bottom: 48px;
+  margin-bottom: 72px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+  }
+}
+@media only screen and (min-width: 1158px) {
+  .hero-title {
+    margin-bottom: 48px;
+  }
 }
 
 .btn {
@@ -269,12 +355,14 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   transition: background-color var(--anim-fast);
 }
+
 .hero-btn:hover {
   background-color: var(--ocean);
 }
 .hero-btn:focus {
   background-color: var(--ocean);
 }
+
 /* advantages section */
 .advantages {
   padding: 96px 0px;
@@ -875,6 +963,11 @@ body {
   background-color: rgba(46, 47, 66, 0.4);
 
   transition: opacity var(--anim-fast), visibility var(--anim-fast);
+}
+@media screen and (orientation: lanscape) {
+  .backdrop {
+    overflow: auto;
+  }
 }
 .is-hidden {
   opacity: 0;
