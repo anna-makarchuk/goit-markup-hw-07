@@ -867,8 +867,13 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  justify-content: center;
+  justify-content: start;
   margin-bottom: 72px;
+}
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    justify-content: center;
+  }
 }
 .portfolio-item {
   color: var(--iris);
@@ -911,8 +916,9 @@ body {
 }
 @media only screen and (min-width: 768px) {
   .portfolio-items {
-    column-gap: 24px;
+    column-gap: 18px;
     row-gap: 72px;
+    justify-content: start;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -938,6 +944,7 @@ body {
 }
 
 .overlay {
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
@@ -951,13 +958,17 @@ body {
   cursor: pointer;
   transition: transform var(--anim-fast);
 }
-.overlay-label {
-  color: var(--cloud);
-}
-
-.portfolio-link:hover .overlay,
-.portfolio-link:focus .overlay {
-  transform: translateY(0);
+@media only screen and (min-width: 768px) {
+  .overlay {
+    display: block;
+  }
+  .overlay-label {
+    color: var(--cloud);
+  }
+  .portfolio-link:hover .overlay,
+  .portfolio-link:focus .overlay {
+    transform: translateY(0);
+  }
 }
 
 .application-name {
