@@ -179,14 +179,10 @@ body {
   color: var(--ocean);
 }
 
-.address {
-  font-style: normal;
-}
-
-.address-list {
+/* .address-list {
   display: flex;
   gap: 40px;
-}
+} */
 @media only screen and (max-width: 768px) {
   .address-list {
     display: none;
@@ -197,8 +193,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+    font-style: normal;
   }
 }
+@media only screen and (min-width: 768px) and (max-width: 1158px) {
+  .address-list {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.04em;
+  }
+}
+
 @media only screen and (min-width: 1158px) {
   .address-list {
     flex-direction: row;
@@ -1077,6 +1083,7 @@ body {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.04em;
+  color: var(--light-slate);
 }
 .modal-form-field {
   position: relative;
